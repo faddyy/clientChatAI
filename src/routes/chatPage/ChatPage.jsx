@@ -1,4 +1,4 @@
-import "./chatPage.css";
+import "./ChatPage.css";
 import NewPrompt from "../../components/newPrompt/NewPrompt";
 import { useQuery } from "@tanstack/react-query";
 import { useLocation } from "react-router-dom";
@@ -28,7 +28,8 @@ const ChatPage = () => {
             ? "Loading..."
             : error
               ? "Something went wrong!"
-              : Array.isArray(data?.history) && data?.history?.map((message, i) => (
+              : Array.isArray(data?.history) &&
+                data?.history?.map((message, i) => (
                   <React.Fragment key={i}>
                     {message.img && (
                       <IKImage
